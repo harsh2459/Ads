@@ -6,18 +6,20 @@ import { History } from './Components/History';
 import { AddTransaction } from './Components/AddTransaction';
 
 import { TransactionsProvider } from './Hooks/TransContext';
+import AdUnit from './Components/AdUnit';
 
 function App() {
   return (
-        <TransactionsProvider>
-          <Header />
-          <div className='container'>
-            <Balance />
-            <AccountDetails />
-            <History />
-            <AddTransaction />
-          </div>
-        </TransactionsProvider>
+    <TransactionsProvider>
+      <Header />
+      <div className='container'>
+        <Balance />
+        <AccountDetails />
+        <History />
+        <AdUnit slot="1234567890" />
+        <AddTransaction />
+      </div>
+    </TransactionsProvider>
   );
 }
 
